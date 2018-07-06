@@ -1,0 +1,9 @@
+/backend/_left.jsp
+/backend/_right.jsp
+/backend/_top.jsp
+/backend/manage.jsp
+/backend/prod_list.jsp
+/backend/sale_list.jsp
+/servlet/SaleListServlet
+/servlet/DownLoadServlet
+/servlet/BackProdListServlet
