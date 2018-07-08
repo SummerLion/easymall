@@ -1,5 +1,5 @@
 <%@page import="java.net.URLDecoder"%>
-<%@ page language="java" import="java.util.*, java.net.URLDecoder" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*, java.net.URLDecoder" isELIgnored="false" pageEncoding="utf-8"%>
 <!DOCTYPE HTML>
 <html>
 	<head>
