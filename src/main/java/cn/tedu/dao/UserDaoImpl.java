@@ -17,7 +17,7 @@ public class UserDaoImpl implements UserDao {
 	}
 	public void addUser(User user) {
 		try {
-			JDBCUtils.update("insert into user values(null, ?,?,?,?,?)", 
+			JDBCUtils.update("insert into user values(null, ?,?,?,?,?)",
 					user.getUsername(),
 					user.getPassword(),
 					user.getNickname(),

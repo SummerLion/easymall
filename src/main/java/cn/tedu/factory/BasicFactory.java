@@ -1,6 +1,8 @@
 package cn.tedu.factory;
 
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -26,14 +28,23 @@ public class BasicFactory {
 
 	static {
 		// 读取配置文件中配置的信息
+		InputStream inputStream = BasicFactory
+				.class
+				.getClassLoader()
+				.getResourceAsStream("conf.properties");
 		try {
+			prop.load(inputStream);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		/*try {
 			String confPath = BasicFactory.class.getClassLoader()
 					.getResource("conf.properties").getPath();
 			prop.load(new FileInputStream(confPath));
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
-		}
+		}*/
 
 	}
 
